@@ -64,6 +64,17 @@ struct ContentView: View {
                     activeSounds: soundMixer.activeSounds,
                     currentCategory: selectedCategory.rawValue
                 )
+                
+                // Update Now Playing info for lock screen
+                if soundMixer.isPlaying {
+                    let activeNames = soundMixer.activeSounds.keys.compactMap { id in
+                        Sound.allSounds.first(where: { $0.id == id })?.name
+                    }.joined(separator: " + ")
+                    NowPlayingManager.shared.updateNowPlaying(
+                        title: activeNames.isEmpty ? "Muon" : activeNames,
+                        isPlaying: true
+                    )
+                }
             }
         }
     }

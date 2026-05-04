@@ -14,9 +14,14 @@ struct MuonApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                Color.black.ignoresSafeArea()
-                
+            if showLaunchAnimation {
+                LaunchAnimationView {
+                    withAnimation(.easeIn(duration: 0.2)) {
+                        showLaunchAnimation = false
+                    }
+                    restoreLastSession()
+                }
+            } else {
                 ContentView()
                     .environmentObject(soundMixer)
                     .environmentObject(storeManager)
@@ -24,21 +29,6 @@ struct MuonApp: App {
                     .environmentObject(favoritesManager)
                     .environmentObject(userMemory)
                     .preferredColorScheme(.dark)
-                    .opacity(showLaunchAnimation ? 0 : 1)
-                
-                if showLaunchAnimation {
-                    LaunchAnimationView {
-                        withAnimation(.easeIn(duration: 0.2)) {
-                            showLaunchAnimation = false
-                        }
-                        // Restore last session after launch
-                        restoreLastSession()
-                    }
-                    .transition(.opacity)
-                }
-            }
-            .onChange(of: scenePhase) { newPhase in
-                handleScenePhase(newPhase)
             }
         }
     }
