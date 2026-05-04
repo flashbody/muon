@@ -1,0 +1,18 @@
+# Xcode
+build/
+DerivedData/
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated
+*.ipa

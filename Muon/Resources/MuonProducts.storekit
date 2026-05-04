@@ -1,0 +1,35 @@
+{
+  "identifier" : "E8A0D67C-1B5E-4D3F-B6E3-8E4A9F2C7D1A",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "3.99",
+      "familyShareable" : true,
+      "internalID" : "F1A2B3C4-D5E6-7890-ABCD-EF1234567890",
+      "localizations" : [
+        {
+          "description" : "Unlock mixing, sleep timer & saved presets. One-time purchase, yours forever.",
+          "displayName" : "Muon Premium",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.weaveon.muon.premium",
+      "referenceName" : "Muon Premium (Lifetime)",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1234567890",
+    "_developerTeamID" : "XXXXXXXXXX",
+    "_lastSynchronizedDate" : "2026-05-04T00:00:00Z"
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

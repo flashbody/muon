@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08722DDE92503F7CFB2B9883 /* NowPlayingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE923115B2008B3A5A1EB971 /* NowPlayingManager.swift */; };
+		0A91CEE06D643D1A66DC206F /* MixPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34146D531AE68BD8A94D4730 /* MixPreset.swift */; };
+		0DC281EA7D48F6BC6B1B132B /* LaunchAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E09FBCE0E772003DCC88F5 /* LaunchAnimationView.swift */; };
+		1326DEEBA9E0F4F805403548 /* indoor_fireplace.m4a in Resources */ = {isa = PBXBuildFile; fileRef = C2CBF62F8F821A71A36163E7 /* indoor_fireplace.m4a */; };
+		1691AF5D774882C75C06BC37 /* baby_pink_noise.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EBC340CFCEFA43CB7E71EF76 /* baby_pink_noise.m4a */; };
+		1C6895888C862941127D3961 /* indoor_fan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 28C50172EDFFF592E390E3ED /* indoor_fan.m4a */; };
+		2DF808D2BC68E52EA93DB863 /* water_waterfall.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 274122F4924999602DE34F8B /* water_waterfall.m4a */; };
+		2E6E2ADE747089BAF7FE0BD6 /* nature_crickets.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0B24BF558766C8D86823C8A4 /* nature_crickets.m4a */; };
+		2FDEEFCA4BDC64998BAC36F2 /* MuonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1ED36918E649BED53376B1 /* MuonApp.swift */; };
+		32C13039E0AE092C18D36058 /* baby_womb_heartbeat.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F11109C5CD29A432B591640C /* baby_womb_heartbeat.m4a */; };
+		35A71146E472757B87003ACE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D134697EF57FD37A5321B4C /* ContentView.swift */; };
+		45D56EF617A5963C8098F6DB /* SoundCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE334271270FABCF23F90A8E /* SoundCardView.swift */; };
+		5C417DBFA4F3019244CB74C3 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901C99B963EB08FAFC7FD4C /* FavoritesManager.swift */; };
+		650EC63A31F32D9A1949A21A /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B313770EE99FB569CC0802 /* StoreManager.swift */; };
+		6827FB8CF7DBA0F324402B73 /* water_stream.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 40299A6AD58F440DC6FF780F /* water_stream.m4a */; };
+		6C7ACDF5EF7934A5BFCA5618 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6768B065CDCDF63B36D497 /* Sound.swift */; };
+		7086CEA8129219D2F19E26AC /* MixerPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC273D7316AD1CEBAE8E479 /* MixerPanelView.swift */; };
+		78C66EA8C48B974A1BC04977 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E346D7212FA8F8B170A73AA0 /* FavoritesView.swift */; };
+		799A67410AB7D5B9BCA98262 /* SavePresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AF3E4B1FDDB2CF8743830 /* SavePresetView.swift */; };
+		86AB6337D10CCE542E440FE1 /* SoundMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622DED85E773C94713621B95 /* SoundMixer.swift */; };
+		8A7815CCB292FFF781536A19 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA1599012DC32F578746B1 /* TimerView.swift */; };
+		8D20EDD8CCBCDB8C111D01A8 /* water_light_rain.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1EEFF6444F4AE0E15E1AB42E /* water_light_rain.m4a */; };
+		98838EB06225DEFF396271FB /* nature_wind.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5DFA92DA5F75C06423852C9E /* nature_wind.m4a */; };
+		9C1B3F767CBD69718E990C1B /* baby_womb_blood_flow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 54AF91874A24EE20551A1835 /* baby_womb_blood_flow.m4a */; };
+		AB208D34D39B2A4DB574FE1D /* UserMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B11D5C01B65F9E73DE91F /* UserMemory.swift */; };
+		AE46C79DA8F624A85E51D100 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871FB593C4FCB649ADE5C955 /* SettingsView.swift */; };
+		B2860B7264CE14F7A31028A4 /* water_ocean_waves.m4a in Resources */ = {isa = PBXBuildFile; fileRef = DB9BCAA3F5FF808BF3720C94 /* water_ocean_waves.m4a */; };
+		B57ACD4AE6EC57F866EADCDA /* baby_cat_purring.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 89BDE19632EC364B015FFA4C /* baby_cat_purring.m4a */; };
+		C84E86A2C48E0C0E85B6C915 /* nature_forest_birds.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8DF13ABBA5E6343A4D0E0BDC /* nature_forest_birds.m4a */; };
+		CAC8C2F34B514F072CA16B38 /* MuonProducts.storekit in Resources */ = {isa = PBXBuildFile; fileRef = FC16843476D9AF81D823CDF0 /* MuonProducts.storekit */; };
+		CFF58012AD3EF606B3AE94F8 /* baby_shushing.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E3D5BBF58010FAE209BBA /* baby_shushing.m4a */; };
+		D26C8E7688A75078F3A2B781 /* SleepTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6547B96C4C4C9D2463A4109 /* SleepTimer.swift */; };
+		D2D87C3C7489C5A07EE9A9AB /* BabyModeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1396AC9DCA48B32FCC5468 /* BabyModeHeaderView.swift */; };
+		D9AFA3563FD4AD422C77ABD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFE02318F0F087457F50A34 /* Assets.xcassets */; };
+		E178D4503E20EEFD43057F71 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43A9B4E69DE637F4D3E138 /* PaywallView.swift */; };
+		E5AFCA29FE13BC4E23D8AB83 /* water_thunderstorm.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AE2A20599FD91AC569A6C /* water_thunderstorm.m4a */; };
+		E87AA1EFA5F3D888E47A348C /* nature_distant_thunder.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E56688D2E12A7E19B9954272 /* nature_distant_thunder.m4a */; };
+		F4970462F5B07B3387313EFC /* indoor_cafe.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 961A76278CD13649ECDF3654 /* indoor_cafe.m4a */; };
+		FD10CE1E46042F9008886CCA /* indoor_train.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 972F6C2249427CBD7B54BE66 /* indoor_train.m4a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		06B313770EE99FB569CC0802 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		0B24BF558766C8D86823C8A4 /* nature_crickets.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nature_crickets.m4a; sourceTree = "<group>"; };
+		15AA1599012DC32F578746B1 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		1EEFF6444F4AE0E15E1AB42E /* water_light_rain.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water_light_rain.m4a; sourceTree = "<group>"; };
+		274122F4924999602DE34F8B /* water_waterfall.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water_waterfall.m4a; sourceTree = "<group>"; };
+		28C50172EDFFF592E390E3ED /* indoor_fan.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = indoor_fan.m4a; sourceTree = "<group>"; };
+		34146D531AE68BD8A94D4730 /* MixPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixPreset.swift; sourceTree = "<group>"; };
+		3F43A9B4E69DE637F4D3E138 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		40299A6AD58F440DC6FF780F /* water_stream.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water_stream.m4a; sourceTree = "<group>"; };
+		4901C99B963EB08FAFC7FD4C /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		4D134697EF57FD37A5321B4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		54AF91874A24EE20551A1835 /* baby_womb_blood_flow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = baby_womb_blood_flow.m4a; sourceTree = "<group>"; };
+		5DFA92DA5F75C06423852C9E /* nature_wind.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nature_wind.m4a; sourceTree = "<group>"; };
+		5DFE02318F0F087457F50A34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		622DED85E773C94713621B95 /* SoundMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundMixer.swift; sourceTree = "<group>"; };
+		6B1396AC9DCA48B32FCC5468 /* BabyModeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyModeHeaderView.swift; sourceTree = "<group>"; };
+		7C8AE2A20599FD91AC569A6C /* water_thunderstorm.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water_thunderstorm.m4a; sourceTree = "<group>"; };
+		871FB593C4FCB649ADE5C955 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		89BDE19632EC364B015FFA4C /* baby_cat_purring.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = baby_cat_purring.m4a; sourceTree = "<group>"; };
+		8D3E3D5BBF58010FAE209BBA /* baby_shushing.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = baby_shushing.m4a; sourceTree = "<group>"; };
+		8DF13ABBA5E6343A4D0E0BDC /* nature_forest_birds.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nature_forest_birds.m4a; sourceTree = "<group>"; };
+		961A76278CD13649ECDF3654 /* indoor_cafe.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = indoor_cafe.m4a; sourceTree = "<group>"; };
+		972F6C2249427CBD7B54BE66 /* indoor_train.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = indoor_train.m4a; sourceTree = "<group>"; };
+		AF1B11D5C01B65F9E73DE91F /* UserMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMemory.swift; sourceTree = "<group>"; };
+		BB6768B065CDCDF63B36D497 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		C2CBF62F8F821A71A36163E7 /* indoor_fireplace.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = indoor_fireplace.m4a; sourceTree = "<group>"; };
+		CA7D15786596CCAFA26A66DF /* Muon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1ED36918E649BED53376B1 /* MuonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuonApp.swift; sourceTree = "<group>"; };
+		CE334271270FABCF23F90A8E /* SoundCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCardView.swift; sourceTree = "<group>"; };
+		D6547B96C4C4C9D2463A4109 /* SleepTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepTimer.swift; sourceTree = "<group>"; };
+		DA1AF3E4B1FDDB2CF8743830 /* SavePresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePresetView.swift; sourceTree = "<group>"; };
+		DB9BCAA3F5FF808BF3720C94 /* water_ocean_waves.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = water_ocean_waves.m4a; sourceTree = "<group>"; };
+		DE923115B2008B3A5A1EB971 /* NowPlayingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingManager.swift; sourceTree = "<group>"; };
+		E346D7212FA8F8B170A73AA0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		E56688D2E12A7E19B9954272 /* nature_distant_thunder.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = nature_distant_thunder.m4a; sourceTree = "<group>"; };
+		E5E09FBCE0E772003DCC88F5 /* LaunchAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimationView.swift; sourceTree = "<group>"; };
+		EBC340CFCEFA43CB7E71EF76 /* baby_pink_noise.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = baby_pink_noise.m4a; sourceTree = "<group>"; };
+		EFC273D7316AD1CEBAE8E479 /* MixerPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerPanelView.swift; sourceTree = "<group>"; };
+		F11109C5CD29A432B591640C /* baby_womb_heartbeat.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = baby_womb_heartbeat.m4a; sourceTree = "<group>"; };
+		FC16843476D9AF81D823CDF0 /* MuonProducts.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = MuonProducts.storekit; sourceTree = "<group>"; };
+		FFAE9BBC036915ADA163D2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0DC9CADB65E2000D80F8CDF8 = {
+			isa = PBXGroup;
+			children = (
+				83B3EFE4D083D7FFC6B5E7D5 /* Muon */,
+				51851CDDBE677A39B9400551 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		155FD541BA6E1106166CAD91 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE334271270FABCF23F90A8E /* SoundCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2E0B5C46E6A129AF6563435A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B1396AC9DCA48B32FCC5468 /* BabyModeHeaderView.swift */,
+				4D134697EF57FD37A5321B4C /* ContentView.swift */,
+				E346D7212FA8F8B170A73AA0 /* FavoritesView.swift */,
+				E5E09FBCE0E772003DCC88F5 /* LaunchAnimationView.swift */,
+				EFC273D7316AD1CEBAE8E479 /* MixerPanelView.swift */,
+				3F43A9B4E69DE637F4D3E138 /* PaywallView.swift */,
+				DA1AF3E4B1FDDB2CF8743830 /* SavePresetView.swift */,
+				871FB593C4FCB649ADE5C955 /* SettingsView.swift */,
+				15AA1599012DC32F578746B1 /* TimerView.swift */,
+				155FD541BA6E1106166CAD91 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30E6BA42FD0FEFDC12120539 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC16843476D9AF81D823CDF0 /* MuonProducts.storekit */,
+				4397CF7F6005D4E5E3223B3A /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4397CF7F6005D4E5E3223B3A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				89BDE19632EC364B015FFA4C /* baby_cat_purring.m4a */,
+				EBC340CFCEFA43CB7E71EF76 /* baby_pink_noise.m4a */,
+				8D3E3D5BBF58010FAE209BBA /* baby_shushing.m4a */,
+				54AF91874A24EE20551A1835 /* baby_womb_blood_flow.m4a */,
+				F11109C5CD29A432B591640C /* baby_womb_heartbeat.m4a */,
+				961A76278CD13649ECDF3654 /* indoor_cafe.m4a */,
+				28C50172EDFFF592E390E3ED /* indoor_fan.m4a */,
+				C2CBF62F8F821A71A36163E7 /* indoor_fireplace.m4a */,
+				972F6C2249427CBD7B54BE66 /* indoor_train.m4a */,
+				0B24BF558766C8D86823C8A4 /* nature_crickets.m4a */,
+				E56688D2E12A7E19B9954272 /* nature_distant_thunder.m4a */,
+				8DF13ABBA5E6343A4D0E0BDC /* nature_forest_birds.m4a */,
+				5DFA92DA5F75C06423852C9E /* nature_wind.m4a */,
+				1EEFF6444F4AE0E15E1AB42E /* water_light_rain.m4a */,
+				DB9BCAA3F5FF808BF3720C94 /* water_ocean_waves.m4a */,
+				40299A6AD58F440DC6FF780F /* water_stream.m4a */,
+				7C8AE2A20599FD91AC569A6C /* water_thunderstorm.m4a */,
+				274122F4924999602DE34F8B /* water_waterfall.m4a */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		51851CDDBE677A39B9400551 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA7D15786596CCAFA26A66DF /* Muon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69743F0F621EA9ABDA10B185 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				DE923115B2008B3A5A1EB971 /* NowPlayingManager.swift */,
+				D6547B96C4C4C9D2463A4109 /* SleepTimer.swift */,
+				622DED85E773C94713621B95 /* SoundMixer.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		83B3EFE4D083D7FFC6B5E7D5 /* Muon */ = {
+			isa = PBXGroup;
+			children = (
+				5DFE02318F0F087457F50A34 /* Assets.xcassets */,
+				FFAE9BBC036915ADA163D2CC /* Info.plist */,
+				CC1ED36918E649BED53376B1 /* MuonApp.swift */,
+				69743F0F621EA9ABDA10B185 /* Audio */,
+				DB90356345A1D1C4CF438706 /* Models */,
+				30E6BA42FD0FEFDC12120539 /* Resources */,
+				BD333C79F15BA951EF83D6DD /* Store */,
+				2E0B5C46E6A129AF6563435A /* Views */,
+			);
+			path = Muon;
+			sourceTree = "<group>";
+		};
+		BD333C79F15BA951EF83D6DD /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				4901C99B963EB08FAFC7FD4C /* FavoritesManager.swift */,
+				06B313770EE99FB569CC0802 /* StoreManager.swift */,
+				AF1B11D5C01B65F9E73DE91F /* UserMemory.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		DB90356345A1D1C4CF438706 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34146D531AE68BD8A94D4730 /* MixPreset.swift */,
+				BB6768B065CDCDF63B36D497 /* Sound.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEEB603FE77B85DEADC83492 /* Muon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B63310F3D475874DA627BAAA /* Build configuration list for PBXNativeTarget "Muon" */;
+			buildPhases = (
+				9A9F78550BC5D5053A54FDF8 /* Sources */,
+				C4F97801DB8B6E52CB448209 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Muon;
+			packageProductDependencies = (
+			);
+			productName = Muon;
+			productReference = CA7D15786596CCAFA26A66DF /* Muon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B396BB8344912857C84E02D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AEEB603FE77B85DEADC83492 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 41EECAD8FE1D50484F45F20E /* Build configuration list for PBXProject "Muon" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 0DC9CADB65E2000D80F8CDF8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 51851CDDBE677A39B9400551 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEEB603FE77B85DEADC83492 /* Muon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4F97801DB8B6E52CB448209 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9AFA3563FD4AD422C77ABD0 /* Assets.xcassets in Resources */,
+				CAC8C2F34B514F072CA16B38 /* MuonProducts.storekit in Resources */,
+				B57ACD4AE6EC57F866EADCDA /* baby_cat_purring.m4a in Resources */,
+				1691AF5D774882C75C06BC37 /* baby_pink_noise.m4a in Resources */,
+				CFF58012AD3EF606B3AE94F8 /* baby_shushing.m4a in Resources */,
+				9C1B3F767CBD69718E990C1B /* baby_womb_blood_flow.m4a in Resources */,
+				32C13039E0AE092C18D36058 /* baby_womb_heartbeat.m4a in Resources */,
+				F4970462F5B07B3387313EFC /* indoor_cafe.m4a in Resources */,
+				1C6895888C862941127D3961 /* indoor_fan.m4a in Resources */,
+				1326DEEBA9E0F4F805403548 /* indoor_fireplace.m4a in Resources */,
+				FD10CE1E46042F9008886CCA /* indoor_train.m4a in Resources */,
+				2E6E2ADE747089BAF7FE0BD6 /* nature_crickets.m4a in Resources */,
+				E87AA1EFA5F3D888E47A348C /* nature_distant_thunder.m4a in Resources */,
+				C84E86A2C48E0C0E85B6C915 /* nature_forest_birds.m4a in Resources */,
+				98838EB06225DEFF396271FB /* nature_wind.m4a in Resources */,
+				8D20EDD8CCBCDB8C111D01A8 /* water_light_rain.m4a in Resources */,
+				B2860B7264CE14F7A31028A4 /* water_ocean_waves.m4a in Resources */,
+				6827FB8CF7DBA0F324402B73 /* water_stream.m4a in Resources */,
+				E5AFCA29FE13BC4E23D8AB83 /* water_thunderstorm.m4a in Resources */,
+				2DF808D2BC68E52EA93DB863 /* water_waterfall.m4a in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A9F78550BC5D5053A54FDF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2D87C3C7489C5A07EE9A9AB /* BabyModeHeaderView.swift in Sources */,
+				35A71146E472757B87003ACE /* ContentView.swift in Sources */,
+				5C417DBFA4F3019244CB74C3 /* FavoritesManager.swift in Sources */,
+				78C66EA8C48B974A1BC04977 /* FavoritesView.swift in Sources */,
+				0DC281EA7D48F6BC6B1B132B /* LaunchAnimationView.swift in Sources */,
+				0A91CEE06D643D1A66DC206F /* MixPreset.swift in Sources */,
+				7086CEA8129219D2F19E26AC /* MixerPanelView.swift in Sources */,
+				2FDEEFCA4BDC64998BAC36F2 /* MuonApp.swift in Sources */,
+				08722DDE92503F7CFB2B9883 /* NowPlayingManager.swift in Sources */,
+				E178D4503E20EEFD43057F71 /* PaywallView.swift in Sources */,
+				799A67410AB7D5B9BCA98262 /* SavePresetView.swift in Sources */,
+				AE46C79DA8F624A85E51D100 /* SettingsView.swift in Sources */,
+				D26C8E7688A75078F3A2B781 /* SleepTimer.swift in Sources */,
+				6C7ACDF5EF7934A5BFCA5618 /* Sound.swift in Sources */,
+				45D56EF617A5963C8098F6DB /* SoundCardView.swift in Sources */,
+				86AB6337D10CCE542E440FE1 /* SoundMixer.swift in Sources */,
+				650EC63A31F32D9A1949A21A /* StoreManager.swift in Sources */,
+				8A7815CCB292FFF781536A19 /* TimerView.swift in Sources */,
+				AB208D34D39B2A4DB574FE1D /* UserMemory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		22726701C9C09FC86D99F852 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = S8V35YCAD7;
+				INFOPLIST_FILE = Muon/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.weaveon.muon;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF1CD6B99E4ADF926F24B14D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Muon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F44617920F414971C458249E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = S8V35YCAD7;
+				INFOPLIST_FILE = Muon/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.weaveon.muon;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB0310A6A40404DB92AABF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Muon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41EECAD8FE1D50484F45F20E /* Build configuration list for PBXProject "Muon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0310A6A40404DB92AABF79 /* Debug */,
+				CF1CD6B99E4ADF926F24B14D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B63310F3D475874DA627BAAA /* Build configuration list for PBXNativeTarget "Muon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F44617920F414971C458249E /* Debug */,
+				22726701C9C09FC86D99F852 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B396BB8344912857C84E02D /* Project object */;
+}
