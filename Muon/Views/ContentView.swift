@@ -37,7 +37,11 @@ struct ContentView: View {
                 MixerPanelView(showSavePreset: $showSavePreset)
                     .transition(.move(edge: .bottom).combined(with: .opacity))
             }
+            
+            Spacer(minLength: 0)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .background(Color.black.ignoresSafeArea())
         .animation(.easeInOut(duration: 0.3), value: soundMixer.activeSounds.isEmpty)
         .animation(.easeInOut(duration: 0.3), value: showResumeBanner)
         .sheet(isPresented: $showTimer) {
