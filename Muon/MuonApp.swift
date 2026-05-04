@@ -14,22 +14,24 @@ struct MuonApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if showLaunchAnimation {
-                LaunchAnimationView {
-                    withAnimation(.easeIn(duration: 0.2)) {
-                        showLaunchAnimation = false
+            Group {
+                if showLaunchAnimation {
+                    LaunchAnimationView {
+                        withAnimation(.easeIn(duration: 0.2)) {
+                            showLaunchAnimation = false
+                        }
+                        restoreLastSession()
                     }
-                    restoreLastSession()
+                } else {
+                    ContentView()
+                        .environmentObject(soundMixer)
+                        .environmentObject(storeManager)
+                        .environmentObject(sleepTimer)
+                        .environmentObject(favoritesManager)
+                        .environmentObject(userMemory)
                 }
-            } else {
-                ContentView()
-                    .environmentObject(soundMixer)
-                    .environmentObject(storeManager)
-                    .environmentObject(sleepTimer)
-                    .environmentObject(favoritesManager)
-                    .environmentObject(userMemory)
-                    .preferredColorScheme(.dark)
             }
+            .preferredColorScheme(.dark)
         }
     }
     

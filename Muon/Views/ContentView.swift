@@ -16,32 +16,32 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
-        VStack(spacing: 0) {
-            // Resume banner (shows when there's a previous session)
-            if showResumeBanner {
-                resumeBanner
-                    .transition(.move(edge: .top).combined(with: .opacity))
+        NavigationStack {
+            VStack(spacing: 0) {
+                // Resume banner (shows when there's a previous session)
+                if showResumeBanner {
+                    resumeBanner
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                }
+                
+                // Top Bar
+                topBar
+                
+                // Category Tabs
+                categoryTabs
+                
+                // Sound Grid
+                soundGrid
+                
+                // Mixer Panel (shown when sounds are active)
+                if !soundMixer.activeSounds.isEmpty {
+                    MixerPanelView(showSavePreset: $showSavePreset)
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
+                }
             }
-            
-            // Top Bar
-            topBar
-            
-            // Category Tabs
-            categoryTabs
-            
-            // Sound Grid
-            soundGrid
-            
-            // Mixer Panel (shown when sounds are active)
-            if !soundMixer.activeSounds.isEmpty {
-                MixerPanelView(showSavePreset: $showSavePreset)
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
-            }
-            
-            Spacer(minLength: 0)
+            .navigationBarHidden(true)
+            .background(Color.black)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .background(Color.black.ignoresSafeArea())
         .animation(.easeInOut(duration: 0.3), value: soundMixer.activeSounds.isEmpty)
         .animation(.easeInOut(duration: 0.3), value: showResumeBanner)
         .sheet(isPresented: $showTimer) {
