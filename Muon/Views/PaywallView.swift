@@ -102,7 +102,7 @@ struct PaywallView: View {
             }
         }
         .preferredColorScheme(.dark)
-        .onChange(of: storeManager.isPurchased) { purchased in
+        .onChange(of: storeManager.isPurchased) { _, purchased in
             if purchased { dismiss() }
         }
     }

@@ -16,60 +16,70 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                // Resume banner (shows when there's a previous session)
-                if showResumeBanner {
-                    resumeBanner
-                        .transition(.move(edge: .top).combined(with: .opacity))
+        GeometryReader { geo in
+            ZStack(alignment: .top) {
+                // 背景 - 完全贴边
+                Color.black
+                    .ignoresSafeArea(edges: .all)
+                
+                // 主内容
+                VStack(spacing: 0) {
+                    // Resume banner
+                    if showResumeBanner {
+                        resumeBanner
+                            .transition(.move(edge: .top).combined(with: .opacity))
+                    }
+                    
+                    // Top Bar - 紧贴状态栏下方（手动控制间距）
+                    topBar
+                        .padding(.top, 8)
+                    
+                    // Category Tabs
+                    categoryTabs
+                    
+                    // Sound Grid - 可滚动
+                    soundGrid
+                    
+                    Spacer(minLength: 0)
+                    
+                    // Mixer Panel - 贴底
+                    if !soundMixer.activeSounds.isEmpty {
+                        MixerPanelView(showSavePreset: $showSavePreset)
+                            .padding(.bottom, geo.safeAreaInsets.bottom)
+                            .transition(.move(edge: .bottom).combined(with: .opacity))
+                    }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .ignoresSafeArea(edges: .top)
                 
-                // Top Bar
-                topBar
-                
-                // Category Tabs
-                categoryTabs
-                
-                // Sound Grid
-                soundGrid
-                
-                // Mixer Panel (shown when sounds are active)
-                if !soundMixer.activeSounds.isEmpty {
-                    MixerPanelView(showSavePreset: $showSavePreset)
-                        .transition(.move(edge: .bottom).combined(with: .opacity))
-                }
+                // 调试信息已移除
             }
-            .navigationBarHidden(true)
-            .background(Color.black)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .onAppear {
+                // 打印调试信息
+                print("=== GeometryReader === size: \(geo.size), safeArea: T\(geo.safeAreaInsets.top) B\(geo.safeAreaInsets.bottom)")
+            }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .animation(.easeInOut(duration: 0.3), value: soundMixer.activeSounds.isEmpty)
         .animation(.easeInOut(duration: 0.3), value: showResumeBanner)
-        .sheet(isPresented: $showTimer) {
-            TimerView()
-        }
-        .sheet(isPresented: $showSettings) {
-            SettingsView()
-        }
-        .sheet(isPresented: $showPaywall) {
-            PaywallView()
-        }
-        .sheet(isPresented: $showSavePreset) {
-            SavePresetView()
-        }
+        .sheet(isPresented: $showTimer) { TimerView() }
+        .sheet(isPresented: $showSettings) { SettingsView() }
+        .sheet(isPresented: $showPaywall) { PaywallView() }
+        .sheet(isPresented: $showSavePreset) { SavePresetView() }
         .onAppear {
             restoreCategory()
+            print("=== ContentView onAppear ===")
         }
-        .onChange(of: selectedCategory) { newValue in
+        .onChange(of: selectedCategory) { _, newValue in
             userMemory.saveLastCategory(newValue.rawValue)
         }
-        .onChange(of: scenePhase) { newPhase in
+        .onChange(of: scenePhase) { _, newPhase in
             if newPhase == .background {
                 userMemory.saveSession(
                     activeSounds: soundMixer.activeSounds,
                     currentCategory: selectedCategory.rawValue
                 )
-                
-                // Update Now Playing info for lock screen
                 if soundMixer.isPlaying {
                     let activeNames = soundMixer.activeSounds.keys.compactMap { id in
                         Sound.allSounds.first(where: { $0.id == id })?.name
@@ -107,15 +117,13 @@ struct ContentView: View {
             
             Spacer()
             
-            Button("Resume") {
-                resumeLastSession()
-            }
-            .font(.system(size: 13, weight: .semibold))
-            .foregroundColor(.black)
-            .padding(.horizontal, 14)
-            .padding(.vertical, 6)
-            .background(Color.cyan)
-            .cornerRadius(16)
+            Button("Resume") { resumeLastSession() }
+                .font(.system(size: 13, weight: .semibold))
+                .foregroundColor(.black)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 6)
+                .background(Color.cyan)
+                .cornerRadius(16)
             
             Button(action: { dismissResumeBanner() }) {
                 Image(systemName: "xmark")
@@ -160,8 +168,7 @@ struct ContentView: View {
             }
         }
         .padding(.horizontal, 20)
-        .padding(.top, 4)
-        .padding(.bottom, 8)
+            .padding(.bottom, 8)
     }
     
     // MARK: - Category Tabs
@@ -240,7 +247,6 @@ struct ContentView: View {
             selectedCategory = category
         }
         
-        // Show resume banner if there's a previous session and nothing is playing
         if userMemory.loadLastSession() != nil && soundMixer.activeSounds.isEmpty {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 showResumeBanner = true

@@ -167,8 +167,11 @@ final class SoundMixer: ObservableObject {
     // MARK: - Audio Buffer Loading
     
     private func loadAudioBuffer(for sound: Sound) -> AVAudioPCMBuffer? {
-        guard let url = Bundle.main.url(forResource: sound.fileName, withExtension: "m4a") else {
-            print("Audio file not found: \(sound.fileName).m4a")
+        // 根据设置选择文件名（真实录音 vs 算法声音）
+        let fileName = sound.getActiveFileName(useRealSound: SoundSettings.shared.useRealSound)
+        
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "m4a") else {
+            print("Audio file not found: \(fileName).m4a")
             return nil
         }
         

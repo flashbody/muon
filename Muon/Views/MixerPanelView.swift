@@ -87,7 +87,7 @@ struct MixerSliderRow: View {
                 }
             }
             .tint(.cyan)
-            .onChange(of: sliderValue) { newValue in
+            .onChange(of: sliderValue) { _, newValue in
                 soundMixer.setVolume(for: sound.id, volume: newValue)
             }
             

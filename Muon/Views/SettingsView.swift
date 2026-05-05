@@ -4,6 +4,7 @@ struct SettingsView: View {
     @EnvironmentObject var storeManager: StoreManager
     @EnvironmentObject var favoritesManager: FavoritesManager
     @EnvironmentObject var soundMixer: SoundMixer
+    @EnvironmentObject var soundSettings: SoundSettings
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -62,6 +63,25 @@ struct SettingsView: View {
                                     favoritesManager.deletePreset(favoritesManager.presets[index])
                                 }
                             }
+                        }
+                    }
+                    
+                    // Sound Settings
+                    Section("Sound Settings") {
+                        Toggle(isOn: $soundSettings.useRealSound) {
+                            HStack {
+                                Image(systemName: "waveform")
+                                    .foregroundColor(.cyan)
+                                Text(soundSettings.useRealSound ? "Real Recordings" : "Algorithm Generated")
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .tint(.cyan)
+                        
+                        if soundSettings.useRealSound {
+                            Text("⚠️ Real recordings not yet available for all sounds. Algorithm versions will be used as fallback.")
+                                .font(.system(size: 11))
+                                .foregroundColor(.gray)
                         }
                     }
                     

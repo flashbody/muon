@@ -33,9 +33,18 @@ struct Sound: Identifiable, Codable, Hashable {
     let fileName: String
     let category: String
     let emoji: String
+    var realFileName: String? = nil  // 真实录音文件名（可选）
     
     var categoryEnum: SoundCategory {
         SoundCategory(rawValue: category) ?? .nature
+    }
+    
+    /// 根据当前设置返回要使用的文件名
+    func getActiveFileName(useRealSound: Bool) -> String {
+        if useRealSound, let real = realFileName {
+            return real
+        }
+        return fileName
     }
 }
 
@@ -46,7 +55,7 @@ extension Sound {
         Sound(id: "thunderstorm", name: "Thunderstorm", fileName: "water_thunderstorm", category: "Water", emoji: "⛈️"),
         Sound(id: "ocean_waves", name: "Ocean Waves", fileName: "water_ocean_waves", category: "Water", emoji: "🌊"),
         Sound(id: "stream", name: "Gentle Stream", fileName: "water_stream", category: "Water", emoji: "💧"),
-        Sound(id: "waterfall", name: "Waterfall", fileName: "water_waterfall", category: "Water", emoji: "🏞️"),
+        Sound(id: "waterfall", name: "Waterfall", fileName: "water_waterfall", category: "Water", emoji: "🌊"),
         
         // Nature
         Sound(id: "forest_birds", name: "Forest Birds", fileName: "nature_forest_birds", category: "Nature", emoji: "🐦"),

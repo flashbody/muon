@@ -29,6 +29,7 @@ struct MuonApp: App {
                         .environmentObject(sleepTimer)
                         .environmentObject(favoritesManager)
                         .environmentObject(userMemory)
+                        .environmentObject(SoundSettings.shared)
                 }
             }
             .preferredColorScheme(.dark)
