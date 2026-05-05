@@ -55,6 +55,7 @@
 		C84E86A2C48E0C0E85B6C915 /* nature_forest_birds.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8DF13ABBA5E6343A4D0E0BDC /* nature_forest_birds.m4a */; };
 		CAC8C2F34B514F072CA16B38 /* MuonProducts.storekit in Resources */ = {isa = PBXBuildFile; fileRef = FC16843476D9AF81D823CDF0 /* MuonProducts.storekit */; };
 		CFF58012AD3EF606B3AE94F8 /* baby_shushing.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E3D5BBF58010FAE209BBA /* baby_shushing.m4a */; };
+		D1546F8BD10DC1274D09B557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C057CD7E57C49694EA0E82 /* LaunchScreen.storyboard */; };
 		D26C8E7688A75078F3A2B781 /* SleepTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6547B96C4C4C9D2463A4109 /* SleepTimer.swift */; };
 		D2D87C3C7489C5A07EE9A9AB /* BabyModeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1396AC9DCA48B32FCC5468 /* BabyModeHeaderView.swift */; };
 		D59C63F8E9F9774C6C0978E7 /* nature_crickets_stereo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1224AB2F25101F49FBF77E47 /* nature_crickets_stereo.m4a */; };
@@ -77,6 +78,7 @@
 		1EEFF6444F4AE0E15E1AB42E /* water_light_rain.m4a */ = {isa = PBXFileReference; path = water_light_rain.m4a; sourceTree = "<group>"; };
 		274122F4924999602DE34F8B /* water_waterfall.m4a */ = {isa = PBXFileReference; path = water_waterfall.m4a; sourceTree = "<group>"; };
 		28C50172EDFFF592E390E3ED /* indoor_fan.m4a */ = {isa = PBXFileReference; path = indoor_fan.m4a; sourceTree = "<group>"; };
+		32C057CD7E57C49694EA0E82 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34146D531AE68BD8A94D4730 /* MixPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixPreset.swift; sourceTree = "<group>"; };
 		3F43A9B4E69DE637F4D3E138 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		40299A6AD58F440DC6FF780F /* water_stream.m4a */ = {isa = PBXFileReference; path = water_stream.m4a; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				5DFE02318F0F087457F50A34 /* Assets.xcassets */,
 				FFAE9BBC036915ADA163D2CC /* Info.plist */,
+				32C057CD7E57C49694EA0E82 /* LaunchScreen.storyboard */,
 				CC1ED36918E649BED53376B1 /* MuonApp.swift */,
 				69743F0F621EA9ABDA10B185 /* Audio */,
 				98D1EB7BD683A2F2D2F1B5E6 /* Managers */,
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9AFA3563FD4AD422C77ABD0 /* Assets.xcassets in Resources */,
+				D1546F8BD10DC1274D09B557 /* LaunchScreen.storyboard in Resources */,
 				CAC8C2F34B514F072CA16B38 /* MuonProducts.storekit in Resources */,
 				B57ACD4AE6EC57F866EADCDA /* baby_cat_purring.m4a in Resources */,
 				8F24A717F0DC929D85709292 /* baby_cat_purring_stereo.m4a in Resources */,

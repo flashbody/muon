@@ -45,3 +45,6 @@ targets:
         UIBackgroundModes:
           - audio
         ITSAppUsesNonExemptEncryption: false
+        UILaunchScreen:
+          UIColorName: LaunchBackgroundColor
+          UIImageName: LaunchIcon

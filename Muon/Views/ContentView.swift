@@ -30,9 +30,8 @@ struct ContentView: View {
                             .transition(.move(edge: .top).combined(with: .opacity))
                     }
                     
-                    // Top Bar - 紧贴状态栏下方（手动控制间距）
+                    // Top Bar - 紧贴状态栏下方
                     topBar
-                        .padding(.top, 8)
                     
                     // Category Tabs
                     categoryTabs
@@ -50,7 +49,6 @@ struct ContentView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .ignoresSafeArea(edges: .top)
                 
                 // 调试信息已移除
             }

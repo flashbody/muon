@@ -25,6 +25,11 @@
 		<string>audio</string>
 	</array>
 	<key>UILaunchScreen</key>
-	<dict/>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchBackgroundColor</string>
+		<key>UIImageName</key>
+		<string>LaunchIcon</string>
+	</dict>
 </dict>
 </plist>

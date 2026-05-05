@@ -1,81 +1,80 @@
 import SwiftUI
 
-/// 启动动画页 - 2.5秒品牌展示动画
+/// 启动动画页 - 2.5秒品牌展示动画（欧美简约风格）
 struct LaunchAnimationView: View {
     @State private var showIcon = false
     @State private var showTitle = false
-    @State private var showSubtitle = false
+    @State private var showTagline = false
     @State private var pulseScale: CGFloat = 1.0
-    @State private var waveOffset: CGFloat = 0
     @State private var opacity: Double = 1.0
     
     let onComplete: () -> Void
     
     var body: some View {
         ZStack {
-            // Background
-            Color.black.ignoresSafeArea()
-            
-            // Subtle wave animation in background
-            WaveShape(offset: waveOffset)
-                .fill(
-                    LinearGradient(
-                        colors: [Color.cyan.opacity(0.05), Color.blue.opacity(0.03)],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
-                )
-                .frame(height: 300)
-                .offset(y: 100)
+            // 背景 - 纯黑（欧美App常用）
+            Color.black
                 .ignoresSafeArea()
             
-            VStack(spacing: 20) {
+            // 背景微光效果（极其微妙）
+            Circle()
+                .fill(
+                    RadialGradient(
+                        colors: [
+                            Color.cyan.opacity(0.08),
+                            Color.clear
+                        ],
+                        center: .center,
+                        startRadius: 50,
+                        endRadius: 300
+                    )
+                )
+                .frame(width: 600, height: 600)
+                .blur(radius: 60)
+                .offset(y: -50)
+            
+            // 主内容 - 垂直居中
+            VStack(spacing: 28) {
                 Spacer()
                 
-                // App Icon - breathing pulse animation
+                // 图标区域 - 呼吸脉动效果
                 ZStack {
-                    // Outer glow ring
+                    // 外圈脉动
                     Circle()
-                        .stroke(
-                            LinearGradient(
-                                colors: [.cyan.opacity(0.3), .blue.opacity(0.1)],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            ),
-                            lineWidth: 2
-                        )
-                        .frame(width: 100, height: 100)
+                        .stroke(Color.cyan.opacity(0.2), lineWidth: 1.5)
+                        .frame(width: 110, height: 110)
                         .scaleEffect(pulseScale)
-                        .opacity(showIcon ? 0.6 : 0)
+                        .opacity(showIcon ? 0.8 : 0)
                     
-                    // Inner icon
+                    // 图标
                     Image(systemName: "waveform.circle.fill")
-                        .font(.system(size: 72))
+                        .font(.system(size: 68, weight: .ultraLight))
                         .foregroundStyle(
                             LinearGradient(
-                                colors: [.cyan, .blue.opacity(0.8)],
+                                colors: [Color.cyan, Color.blue.opacity(0.7)],
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
                             )
                         )
-                        .scaleEffect(showIcon ? 1.0 : 0.3)
+                        .scaleEffect(showIcon ? 1.0 : 0.5)
                         .opacity(showIcon ? 1.0 : 0)
                 }
                 
-                // App Name
+                // 品牌名 - 超大超轻字体（欧美高端App风格）
                 Text("Muon")
-                    .font(.system(size: 38, weight: .ultraLight, design: .rounded))
+                    .font(.system(size: 42, weight: .ultraLight, design: .rounded))
                     .foregroundColor(.white)
+                    .tracking(2)
                     .opacity(showTitle ? 1.0 : 0)
-                    .offset(y: showTitle ? 0 : 15)
+                    .offset(y: showTitle ? 0 : 20)
                 
-                // Tagline
-                Text("Sleep · Focus · Soothe")
-                    .font(.system(size: 14, weight: .regular, design: .rounded))
-                    .foregroundColor(.gray)
-                    .tracking(3)
-                    .opacity(showSubtitle ? 1.0 : 0)
-                    .offset(y: showSubtitle ? 0 : 10)
+                // 标语 - 极简
+                Text("Ambient Soundscape")
+                    .font(.system(size: 13, weight: .regular, design: .rounded))
+                    .foregroundColor(Color.white.opacity(0.4))
+                    .tracking(4)
+                    .opacity(showTagline ? 1.0 : 0)
+                    .offset(y: showTagline ? 0 : 10)
                 
                 Spacer()
                 Spacer()
@@ -88,72 +87,37 @@ struct LaunchAnimationView: View {
     }
     
     private func startAnimation() {
-        // Step 1: Icon appears (0.0s - 0.5s)
-        withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+        // 1. 图标出现（0.0s）
+        withAnimation(.spring(response: 0.7, dampingFraction: 0.65)) {
             showIcon = true
         }
         
-        // Step 2: Pulse breathing starts
-        withAnimation(.easeInOut(duration: 1.2).repeatForever(autoreverses: true)) {
-            pulseScale = 1.15
+        // 2. 呼吸脉动（循环）
+        withAnimation(.easeInOut(duration: 1.5).repeatForever(autoreverses: true)) {
+            pulseScale = 1.2
         }
         
-        // Step 3: Wave animation
-        withAnimation(.linear(duration: 3.0).repeatForever(autoreverses: false)) {
-            waveOffset = .pi * 2
-        }
-        
-        // Step 4: Title appears (0.4s)
-        withAnimation(.easeOut(duration: 0.5).delay(0.4)) {
+        // 3. 标题出现（0.3s）
+        withAnimation(.easeOut(duration: 0.6).delay(0.3)) {
             showTitle = true
         }
         
-        // Step 5: Subtitle appears (0.7s)
-        withAnimation(.easeOut(duration: 0.5).delay(0.7)) {
-            showSubtitle = true
+        // 4. 标语出现（0.6s）
+        withAnimation(.easeOut(duration: 0.6).delay(0.6)) {
+            showTagline = true
         }
         
-        // Step 6: Fade out and complete (2.5s)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
-            withAnimation(.easeIn(duration: 0.3)) {
+        // 5. 淡出（2.0s）
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            withAnimation(.easeIn(duration: 0.5)) {
                 opacity = 0
             }
         }
         
+        // 6. 完成
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             onComplete()
         }
-    }
-}
-
-/// 波浪形状
-struct WaveShape: Shape {
-    var offset: CGFloat
-    
-    var animatableData: CGFloat {
-        get { offset }
-        set { offset = newValue }
-    }
-    
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let width = rect.width
-        let height = rect.height
-        let midHeight = height / 2
-        
-        path.move(to: CGPoint(x: 0, y: midHeight))
-        
-        for x in stride(from: 0, through: width, by: 2) {
-            let relativeX = x / width
-            let y = midHeight + sin((relativeX * .pi * 2) + offset) * 20
-            path.addLine(to: CGPoint(x: x, y: y))
-        }
-        
-        path.addLine(to: CGPoint(x: width, y: height))
-        path.addLine(to: CGPoint(x: 0, y: height))
-        path.closeSubpath()
-        
-        return path
     }
 }
 
