@@ -99,7 +99,7 @@ struct SettingsView: View {
                     // Licenses
                     Section("Audio Licenses") {
                         VStack(alignment: .leading, spacing: 8) {
-                            Text("All audio content in this app consists of nature and ambient sound recordings.")
+                            Text("All audio content in this app is algorithmically generated — no copyrighted music compositions are used.")
                                 .font(.system(size: 12))
                                 .foregroundColor(.gray)
                             
@@ -107,19 +107,11 @@ struct SettingsView: View {
                                 .font(.system(size: 12, weight: .medium))
                                 .foregroundColor(.white.opacity(0.7))
                             
-                            Text("• Pixabay.com — Pixabay Content License (free commercial use)")
+                            Text("• Algorithmically generated audio (owned by Weaveon)")
                                 .font(.system(size: 11))
                                 .foregroundColor(.gray)
                             
-                            Text("• Freesound.org — CC0 1.0 Universal (Public Domain)")
-                                .font(.system(size: 11))
-                                .foregroundColor(.gray)
-                            
-                            Text("• Self-recorded & algorithmically generated audio")
-                                .font(.system(size: 11))
-                                .foregroundColor(.gray)
-                            
-                            Text("\nNo copyrighted music compositions are used in this app.")
+                            Text("• Pixabay.com — Pixabay Content License (free commercial use, for future updates)")
                                 .font(.system(size: 11))
                                 .foregroundColor(.gray)
                         }

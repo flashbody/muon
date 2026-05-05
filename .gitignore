@@ -1,5 +1,6 @@
 # Xcode
 build/
+build_debug/
 DerivedData/
 *.xcodeproj/project.xcworkspace/
 *.xcodeproj/xcuserdata/
@@ -16,3 +17,18 @@ __pycache__/
 
 # Generated
 *.ipa
+
+# API Keys & Secrets
+**/api_keys.json
+**/.env
+**/secrets.*
+
+# StoreKit (contains placeholder IDs)
+# *.storekit
+
+# IDE
+.vscode/
+.idea/
+
+# Package
+*.zip

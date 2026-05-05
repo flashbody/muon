@@ -11,7 +11,7 @@ import subprocess
 import time
 
 # Pixabay API (free tier, 100 req/min)
-API_KEY = "46498136-58e43a8a9a3e6ee9025f9c3a1"  # Free demo key - get your own at pixabay.com/api/docs
+API_KEY = os.environ.get("PIXABAY_API_KEY", "")  # Set your Pixabay API key as environment variable
 BASE_URL = "https://pixabay.com/api/"
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "Muon", "Resources", "Sounds")

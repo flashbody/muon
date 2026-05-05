@@ -34,9 +34,9 @@ Muon/
 
 ## 音效来源
 
-- Pixabay.com（Pixabay License — 免费商用）
-- Freesound.org（CC0 公共领域）
-- 自录音频 & 算法生成
+- 全部18个音效由算法生成（Weaveon 自有版权）
+- Pixabay.com（Pixabay Content License — 免费商用，用于未来更新）
+- 详细归属信息见 [CREDITS.md](CREDITS.md)
 
 ## 构建
 
