@@ -5,98 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muon - Privacy Policy</title>
     <style>
-        body { font-family: -apple-system, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
-        h1 { font-size: 24px; }
-        h2 { font-size: 18px; margin-top: 24px; }
+        body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
+        h1 { font-size: 26px; }
+        h2 { font-size: 19px; margin-top: 28px; }
         h3 { font-size: 15px; margin-top: 16px; }
+        table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background: #f5f5f7; }
     </style>
 </head>
 <body>
     <h1>Muon — Privacy Policy</h1>
-    <p><strong>Last updated:</strong> May 2026</p>
-    <p><strong>Effective date:</strong> May 2026</p>
+    <p><strong>Last updated:</strong> May 6, 2026</p>
+    <p><strong>Effective date:</strong> May 6, 2026</p>
     <p><strong>Developer:</strong> Weaveon</p>
     <p><strong>Contact:</strong> <a href="mailto:flashbody@foxmail.com">flashbody@foxmail.com</a></p>
 
     <h2>1. Overview</h2>
-    <p>Muon ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application, Muon — Sleep & Focus Sounds (the "App").</p>
+    <p>Muon ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application, Muon — Sleep &amp; Focus Sounds (the "App").</p>
+    <p><strong>Privacy promise:</strong> Muon is a fully offline app. We do not collect, store, or transmit any personal data to our servers. There are no servers.</p>
 
     <h2>2. Data Collection</h2>
     <p>Muon does <strong>not collect, store, or transmit any personal data</strong>. The App operates entirely offline and does not require an internet connection for its core functionality.</p>
     <p>Specifically, we do NOT collect:</p>
     <ul>
         <li>Personal identification information (name, email, phone number)</li>
-        <li>Device identifiers or advertising identifiers</li>
-        <li>Location data</li>
+        <li>Device identifiers or advertising identifiers (IDFA / IDFV)</li>
+        <li>Location data (GPS, Wi-Fi, IP-derived)</li>
         <li>Usage analytics or behavioral data</li>
-        <li>Health or medical data</li>
-        <li>Audio recordings from your device</li>
+        <li>Health, medical, or sleep tracking data</li>
+        <li>Audio recordings from your device's microphone</li>
+        <li>Photos, contacts, calendar, or any other user content</li>
     </ul>
+    <p>This corresponds to the Apple App Store privacy label: <strong>"Data Not Collected"</strong>.</p>
 
-    <h2>3. Analytics & Tracking</h2>
-    <p>We do not use any third-party analytics, tracking, advertising, or crash reporting SDKs. No data is sent to any third-party service.</p>
+    <h2>3. Analytics &amp; Tracking</h2>
+    <p>We do not use any third-party analytics, tracking, advertising, or crash reporting SDKs. No Firebase, no Sentry, no Mixpanel, no Facebook SDK. No data is sent to any third-party service. The App does not attempt to identify you across other apps or websites.</p>
 
-    <h2>4. In-App Purchases</h2>
-    <p>In-app purchases are processed entirely through Apple's App Store using StoreKit. We do not have access to your payment information, credit card details, or Apple ID. Purchase transactions are governed by Apple's privacy policy: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></p>
+    <h2>4. In-App Purchases (Apple StoreKit)</h2>
+    <p>The App offers three Pro upgrade options:</p>
+    <table>
+        <tr><th>Plan</th><th>Type</th><th>Price (USD)</th></tr>
+        <tr><td>Pro Monthly</td><td>Auto-renewable subscription (with 7-day free trial)</td><td>$3.99 / month</td></tr>
+        <tr><td>Pro Yearly</td><td>Auto-renewable subscription (with 7-day free trial)</td><td>$19.99 / year</td></tr>
+        <tr><td>Lifetime</td><td>One-time non-consumable purchase</td><td>$99.99</td></tr>
+    </table>
+    <p>All purchases are processed entirely through Apple's App Store using the StoreKit framework. Weaveon never sees your payment method, credit card number, billing address, or Apple ID. The App only receives a signed transaction receipt from Apple to verify entitlement, which is processed locally on your device.</p>
+    <p>Apple's privacy practices governing these transactions: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></p>
 
     <h2>5. Data Storage</h2>
-    <p>Your sound preferences, saved mixes, and purchase status are stored locally on your device only. They are not synced to any server. If you delete the App, this data will be permanently deleted. Purchase status can be restored via your Apple ID.</p>
+    <p>Your sound preferences, saved mixes, sleep timer settings, and entitlement status are stored <strong>only locally</strong> on your device using iOS's standard app sandbox (UserDefaults / SQLite). They are not synced to iCloud unless you opt in via iOS settings, and are never uploaded to any Weaveon server. If you delete the App, this data will be permanently deleted. Your purchase entitlement can be restored on any device signed into the same Apple ID via the "Restore Purchase" option.</p>
 
     <h2>6. Children's Privacy</h2>
     <p>Muon is suitable for all ages (rated 4+) and contains no user-generated content features, social features, or interactive communication tools. While the App includes a "Baby Soothing" sound category, it does not collect any information from or about children.</p>
-    <p>In compliance with the Children's Online Privacy Protection Act (COPPA), we do not collect personal information from children under 13. If you believe a child has somehow provided personal information through our App, please contact us and we will take immediate action.</p>
+    <p>In compliance with the Children's Online Privacy Protection Act (COPPA), we do not collect personal information from children under 13. Since we do not collect personal information from anyone, this requirement is automatically satisfied.</p>
 
     <h2>7. Your Rights</h2>
 
-    <h3>7.1 GDPR (European Economic Area)</h3>
-    <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation (GDPR):</p>
-    <ul>
-        <li><strong>Right to Access:</strong> Request a copy of any personal data we hold about you.</li>
-        <li><strong>Right to Rectification:</strong> Request correction of inaccurate personal data.</li>
-        <li><strong>Right to Erasure:</strong> Request deletion of your personal data.</li>
-        <li><strong>Right to Restrict Processing:</strong> Request that we limit how we use your data.</li>
-        <li><strong>Right to Data Portability:</strong> Request transfer of your data to another service.</li>
-        <li><strong>Right to Object:</strong> Object to our processing of your personal data.</li>
-        <li><strong>Right to Withdraw Consent:</strong> Withdraw consent at any time where we rely on consent.</li>
-    </ul>
-    <p>Since we do not collect any personal data, these rights are automatically satisfied. If you have any concerns, please contact us.</p>
-    <p><strong>Legal basis for processing:</strong> We do not process personal data. Any local data storage on your device is necessary for the App's core functionality (Article 6(1)(b) GDPR).</p>
-    <p><strong>Data Protection Officer:</strong> Weaveon does not have a designated Data Protection Officer as we do not engage in large-scale data processing. Direct all inquiries to: <a href="mailto:flashbody@foxmail.com">flashbody@foxmail.com</a></p>
+    <h3>7.1 GDPR (European Economic Area / UK / Switzerland)</h3>
+    <p>If you are located in the EEA, UK, or Switzerland, you have the rights under the GDPR to access, rectify, erase, restrict processing of, port, or object to processing of your personal data, and to withdraw consent. <strong>Since we do not collect any personal data, these rights are automatically satisfied.</strong></p>
+    <p><strong>Legal basis:</strong> We do not process personal data. Local on-device storage is necessary for the App's core functionality (Article 6(1)(b) GDPR).</p>
+    <p><strong>Data Protection Officer:</strong> Weaveon does not have a designated DPO as we do not engage in large-scale data processing. Direct all inquiries to <a href="mailto:flashbody@foxmail.com">flashbody@foxmail.com</a>.</p>
 
     <h3>7.2 CCPA (California, USA)</h3>
-    <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA):</p>
-    <ul>
-        <li><strong>Right to Know:</strong> Request disclosure of what personal data is collected, used, or shared.</li>
-        <li><strong>Right to Delete:</strong> Request deletion of your personal data.</li>
-        <li><strong>Right to Opt-Out:</strong> Opt out of the sale of personal data.</li>
-        <li><strong>Right to Non-Discrimination:</strong> Not be discriminated against for exercising your privacy rights.</li>
-    </ul>
-    <p><strong>We do not sell, share, or disclose any personal data.</strong> Our App does not engage in any data practices that would require CCPA compliance beyond this disclosure.</p>
-    <p>California residents may contact us at: <a href="mailto:flashbody@foxmail.com">flashbody@foxmail.com</a></p>
+    <p>California residents have the rights under CCPA to know, delete, opt-out, and not be discriminated against. <strong>We do not sell, share, or disclose any personal data.</strong> Contact: <a href="mailto:flashbody@foxmail.com">flashbody@foxmail.com</a></p>
 
     <h3>7.3 Other Jurisdictions</h3>
     <p>Users in other jurisdictions may have additional privacy rights under local laws. We respect all applicable privacy laws and will respond to legitimate requests within the required timeframes.</p>
 
     <h2>8. Data Retention</h2>
-    <p>We do not retain any personal data on our servers. All user preferences are stored locally on your device and are deleted when you delete the App.</p>
+    <p>We do not retain any personal data on our servers (we have no servers). All user preferences are stored locally on your device and are deleted when you delete the App.</p>
 
     <h2>9. Third-Party Services</h2>
-    <p>The App uses Apple's StoreKit framework for in-app purchases. This service is governed by Apple's own privacy policy. No other third-party services are integrated.</p>
+    <p>The App uses Apple's StoreKit framework for in-app purchases, governed by Apple's privacy policy. The App also uses Apple's AVFoundation for local audio playback. <strong>No other third-party services or SDKs are integrated.</strong></p>
+    <p>Audio content includes Creative Commons licensed field recordings sourced from Freesound.org (CC0 and CC-BY), bundled with the App at compile time. Freesound.org is not contacted at runtime.</p>
 
     <h2>10. Security</h2>
-    <p>Since the App does not collect or transmit personal data, the risk of data breach is inherently minimal. We employ standard iOS security practices to protect locally stored data.</p>
+    <p>Since the App does not collect or transmit personal data, the risk of data breach is inherently minimal. Locally stored preferences are protected by iOS's standard sandboxing and Data Protection (file encryption tied to your device passcode).</p>
 
     <h2>11. International Users</h2>
     <p>The App is available globally. Since no data is collected or transmitted, there are no cross-border data transfer concerns.</p>
 
     <h2>12. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by updating the "Last updated" date at the top of this page. Your continued use of the App after any changes constitutes acceptance of the updated Privacy Policy.</p>
+    <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect any changes. Material changes will be highlighted within the App. Continued use of the App after any changes constitutes acceptance of the updated Privacy Policy.</p>
 
     <h2>13. Contact</h2>
-    <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
     <ul>
         <li>Email: <a href="mailto:flashbody@foxmail.com">flashbody@foxmail.com</a></li>
         <li>Privacy Policy URL: <a href="https://flashbody.github.io/muon/privacy.html">flashbody.github.io/muon/privacy.html</a></li>
+        <li>Terms of Use: <a href="terms.html">terms.html</a></li>
     </ul>
 
     <p style="margin-top: 32px; font-size: 12px; color: #999;">© 2026 Weaveon. All rights reserved.</p>

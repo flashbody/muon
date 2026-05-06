@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muon — Sleep & Focus Sounds</title>
-    <meta name="description" content="Muon — 18 immersive ambient soundscapes for deep sleep, focus, and baby soothing. One-time purchase. No subscriptions. No ads.">
+    <meta name="description" content="Muon — 40 immersive ambient soundscapes in lossless 24-bit / 48 kHz audio. Mix up to 4 sounds. Sleep timer. 100% offline. Try Pro free for 7 days.">
     <meta property="og:title" content="Muon — Sleep & Focus Sounds">
-    <meta property="og:description" content="18 immersive ambient sounds. Mix up to 4 at once. Sleep timer. Baby soothing mode. One-time $3.99.">
+    <meta property="og:description" content="40 immersive ambient sounds. Lossless 24-bit / 48 kHz. Mix up to 4 at once. 7-day free trial. From $3.99/month.">
     <meta property="og:type" content="website">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,7 +64,7 @@
         .tagline {
             font-size: 16px;
             color: #86868b;
-            max-width: 560px;
+            max-width: 600px;
             margin-bottom: 40px;
         }
         .cta-row {
@@ -82,10 +82,7 @@
             font-size: 15px;
             transition: transform 0.2s;
         }
-        .btn-primary {
-            background: #00D4FF;
-            color: #000;
-        }
+        .btn-primary { background: #00D4FF; color: #000; }
         .btn-secondary {
             background: rgba(255,255,255,0.1);
             color: #fff;
@@ -93,11 +90,19 @@
         }
         .btn:hover { transform: translateY(-2px); }
 
-        .features {
-            padding: 80px 24px;
-            background: #0a0a0a;
+        .badges-row { display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; justify-content: center; }
+        .badge {
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.3);
+            color: #00D4FF;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
         }
-        .container { max-width: 960px; margin: 0 auto; }
+
+        .features { padding: 80px 24px; background: #0a0a0a; }
+        .container { max-width: 980px; margin: 0 auto; }
         .section-title {
             font-size: clamp(28px, 4vw, 40px);
             text-align: center;
@@ -121,58 +126,55 @@
             border-radius: 18px;
             padding: 28px;
         }
-        .feature-icon {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-        .feature-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .feature-desc {
-            color: #86868b;
-            font-size: 14px;
-        }
+        .feature-icon { font-size: 32px; margin-bottom: 12px; }
+        .feature-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+        .feature-desc { color: #86868b; font-size: 14px; }
 
-        .pricing {
-            padding: 80px 24px;
-            text-align: center;
-            background: #000;
+        .pricing { padding: 80px 24px; text-align: center; background: #000; }
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 920px;
+            margin: 0 auto;
         }
         .price-card {
-            max-width: 420px;
-            margin: 0 auto;
             background: linear-gradient(135deg, #1c1c1e 0%, #000 100%);
-            border: 1px solid rgba(0,212,255,0.3);
+            border: 1px solid #2c2c2e;
             border-radius: 24px;
-            padding: 40px 32px;
-        }
-        .price-tag {
-            font-size: 56px;
-            font-weight: 700;
-            color: #00D4FF;
-            margin: 16px 0 4px;
-        }
-        .price-once {
-            color: #86868b;
-            margin-bottom: 24px;
-        }
-        .feature-list {
+            padding: 32px 24px;
+            position: relative;
             text-align: left;
-            list-style: none;
-            margin: 24px 0;
         }
-        .feature-list li {
-            padding: 8px 0;
-            color: #d0d0d8;
+        .price-card.featured {
+            border: 2px solid #00D4FF;
+            box-shadow: 0 0 40px rgba(0,212,255,0.2);
         }
-        .feature-list li::before {
-            content: "✓ ";
-            color: #00D4FF;
+        .ribbon {
+            position: absolute;
+            top: -10px;
+            right: 24px;
+            background: #00D4FF;
+            color: #000;
+            font-size: 11px;
             font-weight: 700;
-            margin-right: 6px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            letter-spacing: 0.05em;
         }
+        .plan-name { font-size: 14px; color: #86868b; text-transform: uppercase; letter-spacing: 0.08em; }
+        .price-tag {
+            font-size: 40px;
+            font-weight: 700;
+            color: #fff;
+            margin: 12px 0 4px;
+        }
+        .price-period { color: #86868b; font-size: 14px; margin-bottom: 16px; }
+        .trial { color: #00D4FF; font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+        .feature-list { list-style: none; margin: 16px 0; padding: 0; }
+        .feature-list li { padding: 6px 0; color: #d0d0d8; font-size: 14px; }
+        .feature-list li::before { content: "✓ "; color: #00D4FF; font-weight: 700; margin-right: 4px; }
+        .legal-note { color: #6e6e73; font-size: 12px; max-width: 720px; margin: 32px auto 0; text-align: left; line-height: 1.5; }
 
         footer {
             padding: 40px 24px;
@@ -190,10 +192,16 @@
         <div class="logo-icon">μ</div>
         <h1>Muon</h1>
         <p class="subtitle">Sleep & Focus Sounds</p>
-        <p class="tagline">18 immersive ambient soundscapes for deep sleep, focus, and baby soothing.<br>One-time purchase. No subscriptions. No ads. Forever.</p>
+        <p class="tagline">40 immersive ambient soundscapes for deep sleep, focus, and baby soothing.<br>Lossless 24-bit / 48 kHz studio audio. 100% offline. Zero tracking.</p>
         <div class="cta-row">
             <a href="https://apps.apple.com/app/muon" class="btn btn-primary">Download on App Store</a>
             <a href="support.html" class="btn btn-secondary">Support</a>
+        </div>
+        <div class="badges-row">
+            <span class="badge">⭐ 7-Day Free Trial</span>
+            <span class="badge">🎵 Lossless 24-bit</span>
+            <span class="badge">🔒 100% Offline</span>
+            <span class="badge">🌐 EN · 中文 · 日本語</span>
         </div>
     </section>
 
@@ -205,13 +213,18 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🎵</div>
-                    <div class="feature-title">18 Premium Sounds</div>
-                    <div class="feature-desc">Water, nature, indoor, and baby soothing categories — carefully crafted for seamless looping.</div>
+                    <div class="feature-title">40 Premium Sounds</div>
+                    <div class="feature-desc">Noise · Water · Nature · Indoor · Baby · Cosmos · Underwater · Trees · Bloom — 9 categories, all seamless.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎚️</div>
                     <div class="feature-title">4-Track Mixer</div>
-                    <div class="feature-desc">Blend up to 4 sounds simultaneously. Save your favorite combinations.</div>
+                    <div class="feature-desc">Blend up to 4 sounds simultaneously. Save unlimited mix presets.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎧</div>
+                    <div class="feature-title">4 Audio Quality Tiers</div>
+                    <div class="feature-desc">Standard AAC · HQ · Lossless 24-bit / 48 kHz · Spatial Audio (AirPods Pro/Max).</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⏱️</div>
@@ -220,18 +233,13 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">👶</div>
-                    <div class="feature-title">Baby Soothing Mode</div>
+                    <div class="feature-title">Baby Soothing</div>
                     <div class="feature-desc">Womb heartbeat, blood flow, gentle shushing — clinically inspired.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
                     <div class="feature-title">100% Offline</div>
-                    <div class="feature-desc">Zero data collection. Zero tracking. Your privacy is sacred.</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎧</div>
-                    <div class="feature-title">Background Audio</div>
-                    <div class="feature-desc">Lock screen, Control Center, AirPlay — full system integration.</div>
+                    <div class="feature-desc">Zero data collection. Zero analytics. Zero ads. Your privacy is sacred.</div>
                 </div>
             </div>
         </div>
@@ -239,23 +247,52 @@
 
     <section class="pricing">
         <div class="container">
-            <h2 class="section-title">Simple, Honest Pricing</h2>
-            <p class="section-sub">Pay once. Yours forever.</p>
+            <h2 class="section-title">Try Pro Free for 7 Days</h2>
+            <p class="section-sub">All Pro plans unlock the same Pro features. Pick what fits your style.</p>
 
-            <div class="price-card">
-                <p>Muon Pro</p>
-                <p class="price-tag">$3.99</p>
-                <p class="price-once">One-time purchase · Lifetime access</p>
-                <ul class="feature-list">
-                    <li>All 18 sounds unlocked</li>
-                    <li>Save unlimited mixes</li>
-                    <li>Sleep timer & fade-out</li>
-                    <li>Baby soothing mode</li>
-                    <li>Free updates forever</li>
-                    <li>No ads. No subscriptions.</li>
-                </ul>
-                <a href="https://apps.apple.com/app/muon" class="btn btn-primary" style="display:block;">Get Muon</a>
+            <div class="price-grid">
+                <div class="price-card">
+                    <p class="plan-name">Pro Monthly</p>
+                    <p class="price-tag">$3.99</p>
+                    <p class="price-period">per month</p>
+                    <p class="trial">7-day free trial</p>
+                    <ul class="feature-list">
+                        <li>All 40 sounds unlocked</li>
+                        <li>All 4 audio quality tiers</li>
+                        <li>Unlimited mix presets</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                </div>
+                <div class="price-card featured">
+                    <span class="ribbon">BEST VALUE · Save 58%</span>
+                    <p class="plan-name">Pro Yearly</p>
+                    <p class="price-tag">$19.99</p>
+                    <p class="price-period">per year (~$1.67/mo)</p>
+                    <p class="trial">7-day free trial</p>
+                    <ul class="feature-list">
+                        <li>All 40 sounds unlocked</li>
+                        <li>All 4 audio quality tiers</li>
+                        <li>Unlimited mix presets</li>
+                        <li>Best value — save 58%</li>
+                    </ul>
+                </div>
+                <div class="price-card">
+                    <p class="plan-name">Lifetime</p>
+                    <p class="price-tag">$99.99</p>
+                    <p class="price-period">one-time purchase</p>
+                    <p class="trial">No subscription · Yours forever</p>
+                    <ul class="feature-list">
+                        <li>All 40 sounds unlocked</li>
+                        <li>All 4 audio quality tiers</li>
+                        <li>Unlimited mix presets</li>
+                        <li>Free updates forever</li>
+                    </ul>
+                </div>
             </div>
+
+            <p class="legal-note">
+                Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period. Manage or cancel in iPhone Settings → [Your Name] → Subscriptions. Payments charged to your Apple ID. Free trial available to new subscribers only. By purchasing you agree to our <a href="terms.html" style="color:#00D4FF;">Terms of Use</a> and <a href="privacy.html" style="color:#00D4FF;">Privacy Policy</a>.
+            </p>
         </div>
     </section>
 
